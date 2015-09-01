@@ -9,17 +9,7 @@ var rmx = {
   'cubeVertexIndices':null, 'cubeVerticesIndexBuffer':null, 'cubeVerticesColorBuffer':null,'triangleBuffer':null,
   'vertexShader':null,'fragmentShader':null
 };
-//var log = "";
-//var gl;
-//var mode;
-//var time = 0;
-//var canvas;
-//var cubeVertexIndices;
-//var cubeVerticesIndexBuffer;
-//var vertexShader;
-//var fragmentShader;
-//var cubeVerticesColorBuffer;
-//var triangleBuffer;
+
 function modelViewMatrix() {
   return [
     1, 0, 0, 0,
@@ -81,9 +71,9 @@ function loadAssets() {
       return new String((req.status === 200) ? req.responseText : '');
     };
 
-    rmx.V_SHADER = getSourceSynch('Shader.vsh');
+    rmx.V_SHADER = getSourceSynch('shaders/Shader.vsh');
 
-    rmx.F_SHADER = getSourceSynch('Shader.fsh');
+    rmx.F_SHADER = getSourceSynch('shaders/Shader.fsh');
 
 
    
