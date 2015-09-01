@@ -7,8 +7,12 @@
 var rmx = {
   'log':"", 'gl':null, 'mode':null, 'time':0, 'canvas':null, 'V_SHADER':"", 'F_SHADER':"", 'start':Date.now(),
   'cubeVertexIndices':null, 'cubeVerticesIndexBuffer':null, 'cubeVerticesColorBuffer':null,'triangleBuffer':null,
-  'vertexShader':null,'fragmentShader':null
+  'vertexShader':null,'fragmentShader':null, 'background':false
 };
+
+function toggleBackground() {
+    rmx.background = !rmx.background;
+}
 
 function modelViewMatrix() {
   return [
@@ -236,7 +240,11 @@ function render() {
        
     // ---- DRAWING ----
 // Clear to black.
-//     gl.clearColor(0, 0, 0, 1);
+if (rmx.background) {
+    gl.clearColor(0, 0, 0, 1);
+} else {
+    gl.clearColor(0,0,0,0);
+}
     gl.clear(gl.COLOR_BUFFER_BIT);
     
     gl.drawElements(rmx.mode, 36, gl.UNSIGNED_SHORT, 0);
