@@ -15,7 +15,7 @@ void main()
 {
    
     float r = time;//-0.8;
-    
+    float r2 = -r / 2;
     
     mat4 ry = mat4(
         cos(r), 0.0, sin(r), -0.0,
@@ -26,8 +26,8 @@ void main()
     
     mat4 rx = mat4(
                    1.0, 0.0, 0.0, -0.0,
-                   0.0, cos(-r), -sin(-r), -0.0,
-                   0.0, sin(-r), cos(-r), -0.0,
+                   0.0, cos(r2), -sin(r2), -0.0,
+                   0.0, sin(r2), cos(r2), -0.0,
                    0.0, 0.0, 0.0,  1.0
                    );
     
