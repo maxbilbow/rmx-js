@@ -71,9 +71,9 @@ function loadAssets() {
       return new String((req.status === 200) ? req.responseText : '');
     };
 
-    rmx.V_SHADER = getSourceSynch('shaders/Shader.vsh');
+    rmx.V_SHADER = getSourceSynch('Shader.vsh');
 
-    rmx.F_SHADER = getSourceSynch('shaders/Shader.fsh');
+    rmx.F_SHADER = getSourceSynch('Shader.fsh');
 
 
    
