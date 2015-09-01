@@ -7,12 +7,13 @@
 var rmx = {
     'log': "", 'gl': null, 'mode': null, 'time': 0, 'canvas': null, 'V_SHADER': "", 'F_SHADER': "", 'start': Date.now(),
     'cubeVertexIndices': null, 'cubeVerticesIndexBuffer': null, 'cubeVerticesColorBuffer': null, 'triangleBuffer': null,
-    'vertexShader': null, 'fragmentShader': null, 'background': false
+    'vertexShader': null, 'fragmentShader': null, 'background': false, 'local':false
 };
 
 function toggleBackground() {
     rmx.background = !rmx.background;
 }
+
 
 function modelViewMatrix() {
     return [
@@ -36,7 +37,10 @@ function makePerspective(fieldOfViewInRadians, aspect, near, far) {
 }
 ;
 
-function glrun(mode) {
+function glrun(mode, local) {
+    if (local) {
+        rmx.local = local;
+    }
     rmx.canvas = document.querySelector("canvas");
 //     rmx.canvas.width = 600 * window.devicePixelRatio;// 
 //     rmx.canvas.height = 400 * window.devicePixelRatio;
@@ -79,9 +83,10 @@ function loadAssets() {
         return new String((req.status === 200) ? req.responseText : '');
     };
 
-    rmx.V_SHADER = getSourceSynch('https://raw.githubusercontent.com/maxbilbow/rmx-js/master/webgl/shaders/simpleCube.vsh');
+    var localDir = rmx.local ? 'shaders/' : 'https://raw.githubusercontent.com/maxbilbow/rmx-js/master/webgl/SimpleCube/shaders/';
+    rmx.V_SHADER = getSourceSynch(localDir + 'simpleCube.vsh');
 
-    rmx.F_SHADER = getSourceSynch('https://raw.githubusercontent.com/maxbilbow/rmx-js/master/webgl/shaders/simpleCube.fsh');
+    rmx.F_SHADER = getSourceSynch(localDir + 'simpleCube.fsh');
 
 
 

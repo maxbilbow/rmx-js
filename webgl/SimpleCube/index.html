@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style type="text/css">
+canvas#gl {
+   width: 600px;
+   height: 400px;
+}
+</style>
+    </head>
+    <body>
+        
+       
+
+ <canvas id="gl">
+            
+        </canvas>
+        <br/>
+<button type="button" onclick="glrun('triangles')">GL_TRIANGLES</button>
+<button type="button" onclick="glrun()">GL_TRIANGLE_STRIPS</button>
+<button type="button" onclick="glrun('wireframe')">GL_LINE_STRIP</button>
+<button type="button" onclick="glrun('points')">GL_POINTS</button>
+<button type="button" onclick="toggleBackground('wireframe')">Background</button>
+<button type="button" onclick="showLog()">See Log</button>
+
+<script src="simpleCube.js"></script>
+<script>
+    glrun('wireframe',true);
+</script>
+    </body>
+</html>
