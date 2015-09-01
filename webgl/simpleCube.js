@@ -33,8 +33,8 @@ function makePerspective(fieldOfViewInRadians, aspect, near, far) {
 
 function glrun(mode) {
     rmx.canvas = document.querySelector("canvas");
-    rmx.canvas.width = 600 * window.devicePixelRatio;
-    rmx.canvas.height = 400 * window.devicePixelRatio;
+//     rmx.canvas.width = 600 * window.devicePixelRatio;// 
+//     rmx.canvas.height = 400 * window.devicePixelRatio;
     rmx.gl = rmx.canvas.getContext("webgl");
     window.stop();
     var gl = rmx.gl;
