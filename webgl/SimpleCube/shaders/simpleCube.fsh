@@ -19,6 +19,6 @@ void main()
 
     gl_FragColor = vec4(fragColors.x,// * sin(time),
                         fragColors.y,// * sin(-time),
-                        fragColors.z * 0.5 * (sin(time + 0.5) + 1.0),
+                        fragColors.z * 0.5 * (sin(time + 0.5) + 1.0) + 0.2,
                         fragColors.w); // vec4(fragColors.xyz,1.0);
 }
