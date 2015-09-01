@@ -71,9 +71,9 @@ function loadAssets() {
       return new String((req.status === 200) ? req.responseText : '');
     };
 
-    rmx.V_SHADER = getSourceSynch('shaders/simpleCube.vsh');
+    rmx.V_SHADER = getSourceSynch('https://raw.githubusercontent.com/maxbilbow/rmx-js/master/webgl/shaders/simpleCube.vsh');
 
-    rmx.F_SHADER = getSourceSynch('shaders/simpleCube.fsh');
+    rmx.F_SHADER = getSourceSynch('https://raw.githubusercontent.com/maxbilbow/rmx-js/master/webgl/shaders/simpleCube.fsh');
 
 
    
