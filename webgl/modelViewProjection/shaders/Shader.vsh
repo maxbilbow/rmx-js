@@ -35,10 +35,10 @@ void main()
                            1.0, 0.0, 0.0, 0.0,
                             0.0, 1.0, 0.0, 0.0,
                            0.0, 0.0, 1.0, 0.0,
-                            0.0, 0.0, -3.0,  1.0
+                            0.0, 0.0, -4.0,  1.0
                             );
 //    gl_Position = aPosition;
-    gl_Position =  projectionMatrix * viewMatrix * translation  * ry * aPosition;// vec4(aPosition.x, aPosition.y, aPosition.z-0.5, 1.0);
+    gl_Position =  projectionMatrix * viewMatrix * translation  * rx * ry * aPosition;// vec4(aPosition.x, aPosition.y, aPosition.z-0.5, 1.0);
 //    vec4(progress * aPosition.x + (1.0 - progress) * aPosition.y,
 //                       progress * aPosition.y + (1.0 - progress) * aPosition.x,
 //                       0.0,1.0);
