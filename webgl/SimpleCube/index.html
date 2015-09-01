@@ -21,20 +21,19 @@ canvas#gl {
         
        
 
- <canvas id="gl">
             
-        </canvas>
+         
+        <canvas id="gl"> </canvas>
+
         <br/>
 <button type="button" onclick="glrun('triangles')">GL_TRIANGLES</button>
 <button type="button" onclick="glrun()">GL_TRIANGLE_STRIPS</button>
 <button type="button" onclick="glrun('wireframe')">GL_LINE_STRIP</button>
 <button type="button" onclick="glrun('points')">GL_POINTS</button>
-<button type="button" onclick="toggleBackground('wireframe')">Background</button>
+<button type="button" onclick="toggleBackground()">Background</button>
 <button type="button" onclick="showLog()">See Log</button>
 
-<script src="simpleCube.js"></script>
-<script>
-    glrun('wireframe',true);
-</script>
+<script src="simpleCube.js"  onload="glrun('wireframe',true)"></script>
+
     </body>
 </html>
