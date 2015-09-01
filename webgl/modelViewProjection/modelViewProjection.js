@@ -62,15 +62,14 @@ function glrun(mode, local) {
         case "wireframe":
             rmx.mode = gl.LINE_STRIP;
             break;
-        case "triangles":
-            rmx.mode = gl.TRIANGLES;
-            break;
         case "points":
             rmx.mode = gl.POINTS;
             break;
         case "triangle_strips":
-        default:
-            rmx.mode = gl.TRIANGLE_STRIP;
+            rmx.mode = gl.TRIANGLE_STRIP;    
+            break;
+     	case "triangles":
+            rmx.mode = gl.TRIANGLES;
             break;
     }
     gl.viewport(0, 0, rmx.canvas.width, rmx.canvas.height);
