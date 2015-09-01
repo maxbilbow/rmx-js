@@ -236,7 +236,7 @@ function render() {
        
     // ---- DRAWING ----
 // Clear to black.
-    gl.clearColor(0, 0, 0, 1);
+//     gl.clearColor(0, 0, 0, 1);
     gl.clear(gl.COLOR_BUFFER_BIT);
     
     gl.drawElements(rmx.mode, 36, gl.UNSIGNED_SHORT, 0);
