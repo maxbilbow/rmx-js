@@ -69,6 +69,7 @@ function glrun(mode, local) {
             rmx.mode = gl.TRIANGLE_STRIP;    
             break;
      	case "triangles":
+     	default:
             rmx.mode = gl.TRIANGLES;
             break;
     }
