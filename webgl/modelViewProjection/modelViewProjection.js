@@ -51,10 +51,11 @@ function glrun(mode, local) {
         rmx.local = local;
     }
     rmx.canvas = document.querySelector("canvas");
-    if (rmx.local) {
+    if (window.screen.width >= 600 * window.devicePixelRatio) {
      rmx.canvas.width = 600 * window.devicePixelRatio; 
      rmx.canvas.height = 400 * window.devicePixelRatio;
     }
+   
     rmx.gl = rmx.canvas.getContext("webgl");
     window.stop();
     var gl = rmx.gl;
